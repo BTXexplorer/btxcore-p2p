@@ -1,4 +1,4 @@
-var ravencore = require('ravencore-lib');
-ravencore.P2P = require('./lib');
+var btxcore = require('btxcore-lib');
+btxcore.P2P = require('./lib');
 
-module.exports = ravencore.P2P;
+module.exports = btxcore.P2P;

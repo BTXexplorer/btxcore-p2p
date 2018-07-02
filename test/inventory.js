@@ -4,12 +4,12 @@
 
 var should = require('chai').should();
 
-var ravencore = require('ravencore-lib');
+var btxcore = require('btxcore-lib');
 var P2P = require('../');
 var Inventory = P2P.Inventory;
-var BufferUtils = ravencore.util.buffer;
-var BufferWriter = ravencore.encoding.BufferWriter;
-var BufferReader = ravencore.encoding.BufferReader;
+var BufferUtils = btxcore.util.buffer;
+var BufferWriter = btxcore.encoding.BufferWriter;
+var BufferReader = btxcore.encoding.BufferReader;
 
 describe('Inventory', function() {
 

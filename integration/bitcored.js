@@ -6,19 +6,19 @@ var chai = require('chai');
 var should = chai.should();
 var sinon = require('sinon');
 
-var ravencore = require('ravencore-lib');
-var _ = ravencore.deps._;
-var Random = ravencore.crypto.Random;
-var BN = ravencore.crypto.BN;
-var BufferUtil = ravencore.util.buffer;
+var btxcore = require('btxcore-lib');
+var _ = btxcore.deps._;
+var Random = btxcore.crypto.Random;
+var BN = btxcore.crypto.BN;
+var BufferUtil = btxcore.util.buffer;
 var p2p = require('../');
 var Peer = p2p.Peer;
 var Pool = p2p.Pool;
-var Networks = ravencore.Networks;
+var Networks = btxcore.Networks;
 var Messages = p2p.Messages;
 var Inventory = p2p.Inventory;
-var Block = ravencore.Block;
-var Transaction = ravencore.Transaction;
+var Block = btxcore.Block;
+var Transaction = btxcore.Transaction;
 
 // config
 var network = process.env.NETWORK === 'testnet' ? Networks.testnet : Networks.livenet;
@@ -38,8 +38,8 @@ var txHash = {
   'testnet': '22231e8219a0617a0ded618b5dc713fdf9b0db8ebd5bb3322d3011a703119d3b'
 };
 
-// These tests require a running ravend instance
-describe('Integration with ' + network.name + ' ravend', function() {
+// These tests require a running bitcored instance
+describe('Integration with ' + network.name + ' bitcored', function() {
 
   this.timeout(15000);
   var opts = {
